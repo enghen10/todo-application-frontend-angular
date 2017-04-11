@@ -2,23 +2,24 @@ import { Component, OnInit } from '@angular/core';
 import { TodosService } from "../services/todos.service";
 import { Observable } from "rxjs";
 import { Todo } from "../model/todo";
+import { TodoFilter } from "../model/filter";
 
 @Component({
-  selector: 'app-search',
-  templateUrl: './search.component.html',
-  styleUrls: ['./search.component.css'],
+  templateUrl: 'list.component.html',
   providers: [ TodosService ]
 })
 
-export class SearchComponent implements OnInit {
+export class ListComponent implements OnInit {
 
   todos: Todo[];
-  query: string;
+  filter = new TodoFilter('', false);
   errorMsg: Observable<string>;
 
   constructor( private todosService: TodosService ) {}
 
-  ngOnInit() { this.getTodos(); }
+  ngOnInit() {
+    this.getTodos();
+  }
 
   getTodos() {
     this.todosService.getAll().subscribe(

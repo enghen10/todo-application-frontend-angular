@@ -30,10 +30,11 @@ export class TodosService {
 
   private handleResponse (res: Response) {
     let body = res.json();
-    return body._embedded.todos || [];
+    return (body._embedded || {}).todos || body || {};
   }
 
   private handleError (error: Response | any) {
+    console.log(error);
     let errorMsg = error.json();
     console.log(errorMsg);
     return Observable.throw(errorMsg);

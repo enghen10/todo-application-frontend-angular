@@ -5,20 +5,23 @@ import { HttpModule } from '@angular/http';
 
 import { AppComponent } from './app.component';
 import { routing, appRoutingProviders } from './app.routing';
-import { SearchComponent } from './search/search.component';
+import { SearchTodosComponent } from './list/search.component'
+import { ListComponent } from './list/list.component';
 import { FrontpageComponent } from './frontpage/frontpage.component';
 import { NewTodoComponent } from './new-todo/new-todo.component';
 import { NewTodoFormComponent } from './new-todo/new-todo-form.component';
-import { SearchPipe } from './search.pipe';
+import { FilterPipe, SearchPipe } from './pipes/filters.pipe';
 
 @NgModule({
   declarations: [
     AppComponent,
-    SearchComponent,
+    SearchTodosComponent,
+    ListComponent,
     FrontpageComponent,
     NewTodoComponent,
     NewTodoFormComponent,
-    SearchPipe,
+    FilterPipe,
+    SearchPipe
   ],
   imports: [
     BrowserModule,

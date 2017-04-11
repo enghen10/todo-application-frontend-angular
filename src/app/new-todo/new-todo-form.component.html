@@ -1,4 +1,4 @@
-<form (ngSubmit)="save()" #newTodoForm="ngForm">
+<form *ngIf="!submitted" (ngSubmit)="save()" #newTodoForm="ngForm">
   <div class="form-group">
     <label>Description:</label>
     <textarea class="form-control" name="description" [(ngModel)]="todo.description" required></textarea>
@@ -19,7 +19,13 @@
   <button class="btn btn-success" type="submit">Save</button>
 </form>
 
-<div class="container">
+<div *ngIf="!submitted" class="container">
   <br/>
-  <code>{{modelDebug()}}</code>
+  <code>{{modelDebug(todo)}}</code>
+</div>
+
+<div *ngIf="submitted" class="container">
+  <p>Hurray, this was saved on the server:</p>
+  <code>{{modelDebug(savedTodo)}}</code>
+  <a class="btn btn-success" href="list">Go to list</a>
 </div>
