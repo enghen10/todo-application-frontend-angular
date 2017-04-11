@@ -1,8 +1,8 @@
 import { Component, Input } from '@angular/core';
-import { TodoFilter } from '../model/filter';
+import { TodoFilter } from '../shared/model/filter';
 
 @Component({
-  selector: '[search-todos]',
+  selector: '[data-search-todos]',
   template: `
     <form>
       <div class="form-group">

@@ -26,6 +26,9 @@
 
 <div *ngIf="submitted" class="container">
   <p>Hurray, this was saved on the server:</p>
-  <code>{{modelDebug(savedTodo)}}</code>
+  <div class="well well-lg">
+    <code>{{modelDebug(savedTodo)}}</code>
+  </div>
   <a class="btn btn-success" href="list">Go to list</a>
+  <button class="btn btn-success" (click)="makeNewTodo()">New todo</button>
 </div>

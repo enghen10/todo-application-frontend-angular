@@ -5,10 +5,10 @@
     <table class="table table-striped">
       <thead>
         <tr>
-          <th>Description</th>
-          <th>Deadline</th>
-          <th>Do'er</th>
-          <th>Completed</th>
+          <th>{{ 'listpage.header.desc' | translate }}</th>
+          <th>{{ 'listpage.header.deadline' | translate }}</th>
+          <th>{{ 'listpage.header.doer' | translate }}</th>
+          <th>{{ 'listpage.header.completed' | translate }}</th>
         </tr>
       </thead>
       <tbody>
@@ -22,5 +22,5 @@
     </table>
   </div>
 
-  <div class="col-md-3" search-todos [filter]="filter"></div>
+  <div class="col-md-3" data-search-todos [filter]="filter"></div>
 </div>

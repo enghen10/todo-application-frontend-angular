@@ -5,12 +5,12 @@ import { HttpModule } from '@angular/http';
 
 import { AppComponent } from './app.component';
 import { routing, appRoutingProviders } from './app.routing';
-import { SearchTodosComponent } from './list/search.component'
-import { ListComponent } from './list/list.component';
+import { ListComponent, SearchTodosComponent } from './list'
 import { FrontpageComponent } from './frontpage/frontpage.component';
 import { NewTodoComponent } from './new-todo/new-todo.component';
 import { NewTodoFormComponent } from './new-todo/new-todo-form.component';
-import { FilterPipe, SearchPipe } from './pipes/filters.pipe';
+import { FilterPipe, SearchPipe } from './pipes';
+import { TRANSLATION_PROVIDERS, TranslatePipe, TranslateService } from './translate';
 
 @NgModule({
   declarations: [
@@ -21,7 +21,8 @@ import { FilterPipe, SearchPipe } from './pipes/filters.pipe';
     NewTodoComponent,
     NewTodoFormComponent,
     FilterPipe,
-    SearchPipe
+    SearchPipe,
+    TranslatePipe
   ],
   imports: [
     BrowserModule,
@@ -29,7 +30,11 @@ import { FilterPipe, SearchPipe } from './pipes/filters.pipe';
     HttpModule,
     routing
   ],
-  providers: [appRoutingProviders],
+  providers: [
+    appRoutingProviders,
+    TRANSLATION_PROVIDERS,
+    TranslateService
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

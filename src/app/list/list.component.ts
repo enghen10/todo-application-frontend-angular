@@ -1,8 +1,8 @@
 import { Component, OnInit } from '@angular/core';
-import { TodosService } from "../services/todos.service";
+import { TodosService } from "../shared/todos.service";
 import { Observable } from "rxjs";
-import { Todo } from "../model/todo";
-import { TodoFilter } from "../model/filter";
+import { Todo } from "../shared/model/todo";
+import { TodoFilter } from "../shared/model/filter";
 
 @Component({
   templateUrl: 'list.component.html',

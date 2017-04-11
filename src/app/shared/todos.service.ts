@@ -3,7 +3,7 @@ import { Headers, RequestOptions, Http, Response } from '@angular/http';
 import { Observable } from 'rxjs/Observable';
 import 'rxjs/add/operator/catch';
 import 'rxjs/add/operator/map';
-import {Todo} from "../model/todo";
+import {Todo} from "./model/todo";
 
 @Injectable()
 export class TodosService {

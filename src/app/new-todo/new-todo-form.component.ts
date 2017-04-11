@@ -1,6 +1,6 @@
 import { Component } from '@angular/core';
-import { Todo } from '../model/todo';
-import { TodosService } from '../services/todos.service';
+import { Todo } from '../shared/model/todo';
+import { TodosService } from '../shared/todos.service';
 
 @Component({
   selector: 'new-todo-form',
@@ -8,7 +8,6 @@ import { TodosService } from '../services/todos.service';
   providers: [ TodosService ]
 })
 export class NewTodoFormComponent {
-
   todo = new Todo('', '');
   savedTodo: Todo;
   submitted = false;

@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import {TranslateService} from "../translate/translate.service";
 
 @Component({
   selector: 'app-frontpage',
@@ -8,7 +9,9 @@ import { Component, OnInit } from '@angular/core';
 )
 export class FrontpageComponent implements OnInit {
 
-  constructor() { }
+  public title: string;
+
+  constructor(private _translate: TranslateService) { }
 
   ngOnInit() {}
 
