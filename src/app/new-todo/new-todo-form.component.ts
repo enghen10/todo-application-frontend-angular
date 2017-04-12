@@ -31,7 +31,7 @@ export class NewTodoFormComponent {
     this.saveError = null;
   }
 
-  handleSaveError(error) {
+  private handleSaveError(error) {
     console.log(error);
     this.saveError = error;
   }

@@ -1,6 +1,7 @@
 export const LANG_NO_NAME = 'no';
 
 export const LANG_NO_TRANS = {
+  'frontpage.title': 'Todo application frontend with Angular',
   'frontpage.link.frontpage': 'Forside',
   'frontpage.link.todos': 'Todoer',
   'frontpage.link.new': 'Ny',
