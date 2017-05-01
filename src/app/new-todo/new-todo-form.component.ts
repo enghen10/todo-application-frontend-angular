@@ -4,8 +4,7 @@ import { TodosService } from '../shared/todos.service';
 
 @Component({
   selector: 'new-todo-form',
-  templateUrl: './new-todo-form.component.html',
-  providers: [ TodosService ]
+  templateUrl: './new-todo-form.component.html'
 })
 export class NewTodoFormComponent {
   todo = new Todo('', '');

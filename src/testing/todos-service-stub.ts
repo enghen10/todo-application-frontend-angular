@@ -1,16 +1,23 @@
-import { Injectable } from "@angular/core";
 import { Todo } from "../app/shared/model/todo";
+import {Observable} from "rxjs/Observable";
 
-@Injectable()
+
 export class TodosServiceStub {
 
-  constructor() { }
+  testTodo = new Todo('');
 
-  getAll():Todo[] {
-    return [];
+  getAll(): Observable<Todo[]>{
+    const todoList = [this.testTodo];
+    return Observable.create((observer)=> {
+      observer.onNext(todoList);
+      observer.onComplete();
+    });
   }
 
-  create(todo: Todo):Todo{
-    return todo;
+  create(todo: Todo):Observable<Todo> {
+    return Observable.create((observer) => {
+      observer.next(todo);
+      observer.complete();
+    });
   }
 }

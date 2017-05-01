@@ -1,6 +1,4 @@
-export const LANG_NO_NAME = 'no';
-
-export const LANG_NO_TRANS = {
+export const LANG_NO = {
   'frontpage.title': 'Todo application frontend with Angular',
   'frontpage.link.frontpage': 'Forside',
   'frontpage.link.todos': 'Todoer',
